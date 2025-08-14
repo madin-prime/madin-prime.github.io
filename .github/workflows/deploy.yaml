@@ -28,9 +28,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           cd ${GITHUB_WORKSPACE}/built-site
-          git fetch origin gh-pages
           git checkout gh-pages || git checkout --orphan gh-pages
-          git pull origin gh-pages || true
 
       - name: Setup Hugo
         run: |
@@ -40,14 +38,20 @@ jobs:
 
       - name: Build
         run: ${RUNNER_TEMP}/hugo build --minify --baseURL 'https://madin-prime.github.io'
+      
+      - name: Copy built files
+        if: github.ref == 'refs/heads/main'
+        run: |
+          cd ${GITHUB_WORKSPACE}/built-site
+          git rm -rf *
+          cp -r ${GITHUB_WORKSPACE}/public/* .
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         run: |
-          cp -R public/* ${GITHUB_WORKSPACE}/built-site/
           cd ${GITHUB_WORKSPACE}/built-site
           git add .
           git config user.name 'Nafiu Hasan Madin'
           git config user.email 'nafiuhasanmadin@gmail.com'
           git commit -m 'Deploy to GitHub Pages' || echo "No changes to commit"
-          git push origin gh-pages
+          git push origin gh-pages -f
