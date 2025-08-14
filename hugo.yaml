@@ -40,7 +40,7 @@ Menus:
     #   title: Blog posts
     #   url: /gallery
     #   weight: 2
-    #Dropdown menu
+    # # Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
     #   name: Dropdown
@@ -126,7 +126,7 @@ params:
       disableAbout: false
       disableExperience: true
       disableEducation: true
-      disableProjects: true
+      disableProjects: false
       disableAchievements: true
       disableContact: false
 
@@ -136,7 +136,7 @@ params:
     intro: "Hi, my name is"
     title: "Nafiu Hasan Madin."
     subtitle: "Apes together stonk"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that look great, feel fantastic, and function correctly."
+    content: "A passionate developer who loves solving problems and a creator who loves bringing ideas to life through technology."
     image: /img/avatar.jpg
     bottomImage:
       enable: true
@@ -163,19 +163,31 @@ params:
     title: "About Me"
     image: "/img/avatar2.jpg"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA.
+      I’m a developer who loves turning ideas into things you can actually use — whether that’s an app, a game, or something no one thought was possible until it existed. I enjoy solving problems, pushing technology to do cool things, and adding little details that make a project feel alive. Whether it’s designing smooth user experiences or building systems that just work, I’m all about making tech fun and functional.
 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      When I’m not coding, you’ll probably find me experimenting with new tools, learning something unexpected, or wondering why my code only behaves perfectly at 2 AM.
+
+   # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Local File Transfer System
+        content: A simple file sharing system which can help you to share files between your PC and phone (or any device on the same network) without cables or third-party apps.
+        image: /images/projects/lfts.png
+        featured:
+          name: Check
+          link: https://github.com/madin-prime/LocalFileTransferSystem
 
   #Contact
   contact:
     enable: true
     title: "Contact"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    content: My inbox is like a 24/7 café — always open. Whether you’ve got a question, a project idea, or just want to drop a friendly “hi,” send it my way. I can’t promise instant replies (I’m only human… for now), but I’ll do my best to get back to you before your coffee gets cold.
     btnName: "Submit"
     formspree:
       enable: true # `contact.email` value will be ignored
-      formId: https://formspree.io/f/xyzpgdby # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+      formId: xyzpgdby # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
       emailCaption: "Enter your email address"
       messageCaption: "Enter your message here"
       messageRows: 3
@@ -186,10 +198,10 @@ params:
     socialNetworks:
       github: https://github.com/madin-prime
       # linkedin: https://linkedin.com
-      twitter: https://x.com/nafiu_hasan71
-      instagram: https://www.instagram.com/madin.satgt
-      facebook: https://www.facebook.com/madin.satgt
-
+      twitter: https://x.com/ItzMadinPrime
+      instagram: https://www.instagram.com/MadinPrime
+      facebook: https://www.facebook.com/MadinPrime
+      reddit: https://www.reddit.com
   # List pages like blogs and posts
   listPages:
     disableFeaturedImage: false
