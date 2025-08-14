@@ -12,15 +12,20 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v5
         with:
-          ref: main
           submodules: recursive
 
       - name: Checkout destination
-        uses: actions/checkout@v5
         if: github.ref == 'refs/heads/main'
+        uses: actions/checkout@v5
         with:
-          ref: gh-pages
           path: built-site
+          fetch-depth: 0
+      
+      - name: Switch to gh-pages branch
+        if: github.ref == 'refs/heads/main'
+        run: |
+          cd ${GITHUB_WORKSPACE}/built-site
+          git checkout -b gh-pages
 
       - name: Setup Hugo
         run: |
@@ -39,5 +44,5 @@ jobs:
           git add .
           git config user.name 'Nafiu Hasan Madin'
           git config user.email 'nafiuhasanmadin@gmail.com'
-          git commit -m 'Deploy to GitHub Pages'
-          git push
+          git commit -m 'Deploy to GitHub Pages' || echo "No changes to commit"
+          git push origin gh-pages
