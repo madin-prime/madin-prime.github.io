@@ -60,14 +60,14 @@ Menus:
 
 params:
   title: "madin-prime"
-  description: Text about my cool site
+  description: "Personal website of Nafiu Hasan Madin showcasing his projects, skills, and experiences."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/img/mp.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
   # Note the lack of "" in true, it should be of boolean type.
-  useBootstrapCDN: false
+  useBootstrapCDN: true
 
   # If you want to load dynamically responsive images from Cloudinary
   # This requires your images to be uploaded + hosted on Cloudinary
@@ -135,8 +135,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Nafiu Hasan Madin."
-    subtitle: "Apes together stonk"
-    content: "A passionate developer who loves solving problems and a creator who loves bringing ideas to life through technology."
+    subtitle: "A place for my ideas."
+    content: "Welcome to my personal corner of the internet! Here, I share my journey as a developer, my projects, and the occasional musings on technology and life. Whether you’re here to check out my work or just passing by, I hope you find something that sparks your interest."
     image: /img/avatar.jpg
     bottomImage:
       enable: true
@@ -163,9 +163,13 @@ params:
     title: "About Me"
     image: "/img/avatar2.jpg"
     content: |-
-      I’m a developer who loves turning ideas into things you can actually use — whether that’s an app, a game, or something no one thought was possible until it existed. I enjoy solving problems, pushing technology to do cool things, and adding little details that make a project feel alive. Whether it’s designing smooth user experiences or building systems that just work, I’m all about making tech fun and functional.
+        Being a guy born much late, I always felt like I missed the golden age of technology. But that didn’t stop me from diving headfirst into the world of coding and development. I loved the earlier internet. I loved when people used to share their knowledge without any expectation of return. Nowadays, it feels like everyone is trying to monetize everything and no one is willing to just be their self and share their cool stuff or what they made. And yea I've heard about the indie web and I loved it.
 
-      When I’m not coding, you’ll probably find me experimenting with new tools, learning something unexpected, or wondering why my code only behaves perfectly at 2 AM.
+        But from the looks of it, it's only going worsen as AI floods the internet with it's sloppy writing and art. It's lose-lose situation for indie web. Because if the indie web becomes big, it will be flooded with AI generated content and if it doesn't, it will be lost in the sea of AI generated content. And I don't want to see that happen. I want to see the indie web thrive and I want to see people sharing their knowledge and experiences without any expectation of return.
+
+        It's not all bad tho. I'm here to try and change that. I want to share my knowledge, my projects, and my experiences. The section is not really about me, it's about the things I love and the things I want to share with the world. It's about the things that make me who I am. So, if you're here to learn something new, or just to see what I'm up to, I hope you find something that resonates with you.
+
+        I've said a lot about "the golden age of technology" and "the indie web", but I haven't really explained what they are. I will do that in a later post, cause if you remember, you were reading the about section and I got carried away. You'll get this sort of feeling a lot when you read my posts. I tend to get carried away a lot. But that's just me, I guess. I love to write and I love to share my thoughts and experiences with the world. So, if you're here to read my posts, I hope you enjoy them.
 
    # projects
   projects:
